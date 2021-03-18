@@ -13,27 +13,32 @@ public class Ejercicio5 {
         int cantidadDigitos = scanner.nextInt();
 
         System.out.println("Ingrese D:");
-        char digito = (char)scanner.nextInt();
+        int digito = scanner.nextInt();
 
-        int b = 0;
+        while (digito < 0 || digito > 9){
+            System.out.println("D debe ser un número entre 0 y 9. Intente nuevamente:");
 
-        for(Integer i = 0; b < cantidadMostrar ;i++) {
-            if(contarDigitos(i, digito) == cantidadDigitos){
+            digito = scanner.nextInt();
+        }
+
+        int count = 0;
+
+        for (Integer i = 0; count < cantidadMostrar ;i++) {
+            if (contarDigitos(i, digito) == cantidadDigitos) {
                 System.out.println(i);
-                b++;
+
+                count++;
             }
         }
 
         scanner.close();
     }
 
-    public static int contarDigitos(Integer numero, char digito){
-        String str = numero.toString();
-        boolean flag = false;
+    public static int contarDigitos(int numero, int digito) {
         int count = 0;
 
-        for (char c : str.toCharArray()) {
-            if(c == digito){
+        for (int i = numero; i > 0; i = i/10) {
+            if(i % 10 == digito){
                 count++;
             }
         }
