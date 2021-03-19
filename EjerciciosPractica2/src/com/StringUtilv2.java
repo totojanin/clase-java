@@ -10,9 +10,7 @@ public class StringUtilv2 {
 
         String nuevoString = "";
 
-        for (int i = posPrimerLetra; i < s.length(); i++) {
-            nuevoString += s.charAt(i);
-        }
+        nuevoString = s.substring(posPrimerLetra);
 
         return nuevoString;
     }
@@ -26,9 +24,7 @@ public class StringUtilv2 {
 
         String nuevoString = "";
 
-        for (int i = 0; i <= posUltimaLetra; i++) {
-            nuevoString += s.charAt(i);
-        }
+        nuevoString = s.substring(0, posUltimaLetra + 1);
 
         return nuevoString;
     }
