@@ -6,7 +6,7 @@ import java.util.Map;
 
 public class RadixSortEjerc
 {
-	public static int[] radixSort(int []arr)
+	public static void radixSort(int []arr)
 	{
 		String[] sArr = StringUtil.toStringArray(arr);
 
@@ -14,7 +14,11 @@ public class RadixSortEjerc
 
 		sArr = agregarElementosAListas(sArr);
 
-		return StringUtil.toIntArray(sArr);
+		int[] iArrOK = StringUtil.toIntArray(sArr);
+
+		for (int i = 0; i < iArrOK.length; i++) {
+			arr[i] = iArrOK[i];
+		}
 	}
 
 	public static String[] agregarElementosAListas(String[] sArr) {
@@ -70,7 +74,7 @@ public class RadixSortEjerc
 	{
 		int arr[] = { 16223, 898, 13, 906, 235, 23, 9, 1532, 6388, 2511, 8 };
 
-		arr = radixSort(arr);
+		radixSort(arr);
 		
 		for (int i = 0; i < arr.length; i++)
 		{
