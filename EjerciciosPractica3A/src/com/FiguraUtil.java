@@ -1,3 +1,5 @@
+package com;
+
 public class FiguraUtil {
     public static double areaPromedio(FiguraGeometrica[] arr) {
         double sum = 0;

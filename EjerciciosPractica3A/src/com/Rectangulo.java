@@ -1,3 +1,5 @@
+package com;
+
 public class Rectangulo extends FiguraGeometrica {
     private int base;
     private int altura;
