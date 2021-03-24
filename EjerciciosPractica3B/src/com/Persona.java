@@ -10,6 +10,11 @@ public class Persona implements Precedable<Persona> {
     }
 
     @Override
+    public String toString() {
+        return this.getNombre() + " - " + this.getDni();
+    }
+
+    @Override
     public int precedeA(Persona persona) {
         if (this.dni < persona.dni) {
             return -1;

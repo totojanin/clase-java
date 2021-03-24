@@ -9,6 +9,10 @@ public class Celular implements Precedable<Celular> {
         this.titular = titular;
     }
 
+    public String toString() {
+        return this.getTitular() + " - " + this.getNumero();
+    }
+
     @Override
     public int precedeA(Celular celular) {
         if (this.numero < celular.numero) {

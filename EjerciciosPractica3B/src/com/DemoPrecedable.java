@@ -1,10 +1,8 @@
 package com;
 
-import java.util.function.Predicate;
-
 public class DemoPrecedable {
     public static void main(String[] args) {
-        Persona[] arr = new Persona[5];
+        Precedable<Persona>[] arr = new Persona[5];
 
         arr[0] = new Persona("Carlos", 12345);
         arr[1] = new Persona("Juan", 54321);
@@ -15,12 +13,12 @@ public class DemoPrecedable {
         SortUtil.ordenar(arr);
 
         for (int i = 0; i < arr.length; i++) {
-            System.out.println((arr[i].getNombre() + " - " + arr[i].getDni()));
+            System.out.println(arr[i].toString());
         }
     }
 
 //    public static void main(String[] args) {
-//        Celular[] arr = new Celular[5];
+//        Precedable<Celular>[] arr = new Celular[5];
 //
 //        arr[0] = new Celular(11223344, "Carlos");
 //        arr[1] = new Celular(10111111, "Juan");
@@ -31,7 +29,7 @@ public class DemoPrecedable {
 //        SortUtil.ordenar(arr);
 //
 //        for (int i = 0; i < arr.length; i++) {
-//            System.out.println((arr[i].getTitular() + " - " + arr[i].getNumero()));
+//            System.out.println(arr[i].toString());
 //        }
 //    }
 }
