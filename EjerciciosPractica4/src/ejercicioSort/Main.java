@@ -8,7 +8,7 @@ public class Main {
     public static void main(String[] args) throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException, IOException {
         Sorter sorter = (Sorter)MiFactory.getInstance("sorterQuick");
 
-        Integer[] arr = new Integer[100000];
+        Integer[] arr = new Integer[9998];
 
         int j = 0;
 
